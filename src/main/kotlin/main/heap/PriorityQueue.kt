@@ -1,4 +1,4 @@
-package heap
+package main.heap
 interface PriorityQueue {
     fun insert(x: Int)
     fun peek(): Int
@@ -9,11 +9,10 @@ interface PriorityQueue {
 class PriorityQueueImpl(arr: IntArray) : Heap(), PriorityQueue {
 
     companion object {
-
         private const val MAX = 15
     }
 
-    private val heap = IntArray(heap.PriorityQueueImpl.Companion.MAX)
+    private val heap = IntArray(PriorityQueueImpl.Companion.MAX)
     private var heapSize: Int = 0
 
     init {

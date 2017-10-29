@@ -1,4 +1,4 @@
-import heap.PriorityQueueImpl
+import main.heap.PriorityQueueImpl
 import org.junit.Assert
 import org.junit.Test
 

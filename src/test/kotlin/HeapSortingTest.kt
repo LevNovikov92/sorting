@@ -1,4 +1,4 @@
-import heap.HeapSorting
+import main.heap.HeapSorting
 import org.junit.Assert
 import org.junit.Test
 
@@ -10,7 +10,7 @@ class HeapSortingTest {
 
     @Test
     fun maxHeapify() {
-        var arr = intArrayOf(1,4,10,14,7,9,3,2,8,1)
+        val arr = intArrayOf(1,4,10,14,7,9,3,2,8,1)
         heapSorting.print(arr, arr.size)
         heapSorting.maxHeapify(arr, 1, arr.size)
         Assert.assertArrayEquals(heapArray, heapArray)

@@ -1,4 +1,6 @@
-class MergeSorting {
+package main
+
+class MergeSorting : Sorting {
 
     fun merge(left: IntArray, right: IntArray) : IntArray {
         val result = IntArray(left.size + right.size)
@@ -28,7 +30,7 @@ class MergeSorting {
         return result
     }
 
-    fun sort(arr: IntArray): IntArray {
+    override fun sort(arr: IntArray): IntArray {
         return if (arr.size == 1) {
             arr
         } else {

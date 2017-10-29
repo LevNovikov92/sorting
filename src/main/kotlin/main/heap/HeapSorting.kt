@@ -1,4 +1,6 @@
-package heap
+package main.heap
+
+import main.Sorting
 
 class HeapSorting : Heap(), Sorting {
 

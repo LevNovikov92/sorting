@@ -1,4 +1,4 @@
-package heap
+package main.heap
 
 open class Heap {
     protected fun left(i: Int): Int = 2 * (i + 1) - 1
