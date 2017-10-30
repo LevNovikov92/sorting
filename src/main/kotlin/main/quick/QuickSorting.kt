@@ -5,10 +5,19 @@ import main.Sorting
 class QuickSorting : Sorting {
 
     override fun sort(arr: IntArray): IntArray {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        quickSort(arr, 0, arr.size - 1)
+        return arr
     }
 
-    fun partition(arr: IntArray, l: Int, r: Int) {
+    private fun quickSort(arr: IntArray, l: Int, r: Int) {
+        if (l < r) {
+            val i = partition(arr, l, r)
+            quickSort(arr, l, i - 1)
+            quickSort(arr, i + 1, r)
+        }
+    }
+
+    fun partition(arr: IntArray, l: Int, r: Int): Int {
         val x = arr[r]
         var i = l - 1
         for (j in l until r) {
@@ -19,7 +28,9 @@ class QuickSorting : Sorting {
                 arr[i] = v
             }
         }
+        i += 1
         arr[r] = arr[i]
         arr[i] = x
+        return i
     }
 }
